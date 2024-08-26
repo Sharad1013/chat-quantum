@@ -5,6 +5,7 @@ const Chat = () => {
   const [open, setOpen] = useState(false);
   const [text, setText] = useState("");
   const pickerRef = useRef(null);
+  const endRef = useRef(null);
 
   const handleEmoji = (e) => {
     setText((prev) => prev + e.emoji);
@@ -16,7 +17,10 @@ const Chat = () => {
     }
   };
 
+
+
   useEffect(() => {
+    endRef.current?.scrollIntoView({ behaviour: "smooth" });
     if (open) {
       document.addEventListener("mousedown", handleClickOutside);
     } else {
@@ -111,6 +115,7 @@ const Chat = () => {
             <span>1 min ago</span>
           </div>
         </div>
+        <div ref={endRef}></div>
       </div>
       <div className="bottom">
         <div className="icons">
