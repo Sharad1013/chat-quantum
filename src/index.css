@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -12,9 +10,8 @@
 }
 
 :root {
-  --accentColor: rgb(17, 38, 62,0.8);
+  --accentColor: rgb(17, 38, 62, 0.8);
 }
-
 
 body {
   background-image: url("background.jpg");
@@ -35,4 +32,11 @@ body {
   border-radius: 0.8em;
   border: 1px solid rgba(255, 255, 255, 0.125);
   display: flex;
+}
+
+.loading {
+  padding: 50px;
+  font-size: 36px;
+  border-radius: 50%;
+  background-color: rgba(17, 25, 40, 0.9);
 }
